@@ -1,0 +1,29 @@
+{
+  "name": "unuglify",
+  "version": "1.0.0",
+  "description": "uglify for un-uglify",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firodj/unuglify.git"
+  },
+  "keywords": [
+    "uglify",
+    "reverse-engineer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/firodj/unuglify/issues"
+  },
+  "homepage": "https://github.com/firodj/unuglify#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "uglify-js": "^3.17.4"
+  }
+}
