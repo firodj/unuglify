@@ -1,4 +1,4 @@
-const { ruleBooleanUgly, replaceBool } = require('./rules/booleans');
+const { ruleBooleanUgly, replaceBool } = require('./rules');
 const U3 = require('uglify-js');
 
 const doTransform = function(toplevel) {
