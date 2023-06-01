@@ -9,11 +9,6 @@ function getDotsNames(node) {
 	while (node instanceof U3.AST_Dot) {
 		if (node.expression instanceof U3.AST_SymbolRef) {
 			const symbol_ref = node.expression;
-			/*
-			if (void 0 === symbol_ref.thedef) {
-					throw new Error(`Uknown thedef of: ${symbol_ref.name} for ${initial_node.print_to_string()}`);
-			}*/
-			
 			names.push(node.property);
 
 			if (void 0 !== symbol_ref.thedef) {
