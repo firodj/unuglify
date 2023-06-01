@@ -1,4 +1,4 @@
-const { getDotsNames, nodeFromDotsNames } = require('./dotsnames.js')
+const { getDotsNames, getSubsNames, nodeFromDotsNames } = require('./dotsnames.js')
 
 const U3 = require('uglify-js');
 
@@ -6,6 +6,13 @@ test('getDotsNames', () => {
     const toplevel =  U3.parse(`X.prototype.hasBrain`);
     const node = toplevel.body[0].body;
     const x = getDotsNames(node);
+    expect(x.names).toEqual(["hasBrain", "prototype", "X"]);
+})
+
+test('getSubsNames', () => {
+    const toplevel =  U3.parse(`X.prototype["hasBrain"]`);
+    const node = toplevel.body[0].body;
+    const x = getSubsNames(node);
     expect(x.names).toEqual(["hasBrain", "prototype", "X"]);
 })
 
